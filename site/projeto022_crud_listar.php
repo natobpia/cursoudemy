@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+    include_once("conexao.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,15 +14,18 @@
 </head>
 <body>
 
-    <?php
-    $servidor = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $dbname = "celke";
+    <a href="projeto023_crud_create.php">Cadastrar</a>
 
-    $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+    <?php
 
     echo "<h1>Listar os usuários</h1>";
+
+    if(isset($_SESSION['msg'])){
+
+        echo "<p>" . $_SESSION['msg'] . "</p>";
+
+        unset($_SESSION['msg']);
+    }
 
     $result_qnt_user = "SELECT COUNT(id) as qnt_usuarios FROM usuarios";
 
@@ -38,7 +49,9 @@
         echo "Nome: " . $row_usuarios['nome'] . "<br>";
         echo "Email: " . $row_usuarios['email'] . "<br>";
         echo "Situação: " . $row_usuarios['name_sit'] . "<br>";
-        echo "Nível de Acesso: " . $row_usuarios['name_nivac'] . "<hr>";
+        echo "Nível de Acesso: " . $row_usuarios['name_nivac'] . "<br>";
+        echo "<a href='projeto025_crud_update.php?id=" . $row_usuarios['id'] . "'>Editar</a><br>";
+        echo "<a href='projeto027_crud_delete.php?id=" . $row_usuarios['id'] . "'>Deletar</a><hr>";
 
     }
 
