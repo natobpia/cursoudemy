@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="C:\xampp\htdocs\www\Curso\Bootstrap4\css\bootstrap.css">
+
+    <title>Projeto 022 - Modal Variavel</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Exemplo de janela Modal com variavel</h1>
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarUsuario" data-usuario="Cesar" data-email="cesar@celke.com.br">
+      Editar usuário</button>
+
+      <div class="modal fade" id="editarUsuario" tabindex="-1" role="dialog" 
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar o Usuário</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label class="col-form-label">Usuário: </label>
+                        <input type="text" class="form-control" id="usuario">
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label">E-mail:</label>
+                        <input type="text" class="form-control" id="email">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-warning">Salvar</button>
+                  </div>
+          </div>
+        </div>  
+      </div> 
+    </div>
+
+
+    <script src="C:\xampp\htdocs\www\Curso\Bootstrap4\js\jquery-3.5.1.slim.min.js"></script>
+    <script src="C:\xampp\htdocs\www\Curso\Bootstrap4\js\popper.min.js" ></script>
+    <script src="C:\xampp\htdocs\www\Curso\Bootstrap4\js\bootstrap.min.js" ></script>
+
+    <script>
+      $('#editarUsuario').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var usuario = button.data('usuario');
+        var email = button.data('email');
+        var modal = $(this);
+        modal.find('.modal-title').text('Editar usuário: ' + usuario);
+        modal.find('#usuario').val(usuario);
+        modal.find('#email').val(email);      
+      });
+    </script>
+  </body>
+</html>
