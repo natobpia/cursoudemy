@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="C:\xampp\htdocs\www\Curso\Bootstrap4\css\bootstrap.css">
+
+    <title>Projeto 010 - Form</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <form>
+        <h1>Cadastrar Usuário</h1>
+        <div class="form-group">
+              <label>Nome</label>
+              <input type="text" class="form-control form-control-lg" placeholder="Nome Completo">
+        </div>
+        <div class="form-group">
+              <label>E-mail</label>
+              <input type="email" class="form-control" placeholder="Seu melhor e-mail">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+              <label>Senha</label>
+              <input type="password" class="form-control form-control-sm" placeholder="Senha com 6 caracteres">
+        </div>
+        <div class="form-group">
+              <label>Dia</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+        </div>
+        <div class="form-group">
+              <label>Mensagem</label>
+              <textarea class="form-control" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+              <label>Foto</label>
+              <input type="file" class="form-control-file">
+        </div>
+        <div class="form-group">
+          <label>Usuário</label>
+              <input class="form-control" type="text" placeholder="Cesar" readonly>
+        </div>
+        <div class="form-group">
+          <label>E-mail principal</label>
+              <input type="text" readonly class="form-control-plaintext" value="cesar@celke.com.br">
+        </div>
+        <div class="form-group">
+          <label>Disciplina</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Matemática
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              História
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled>
+            <label class="form-check-label" for="defaultCheck1">
+              Geografia
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+              <label>Situação</label>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Ativo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                Inativo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+              <label class="form-check-label" for="exampleRadios3">
+                Aguardando confirmação
+              </label>
+            </div>
+        </div>
+        <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+              <button type="submit" class="btn btn-success">Cadastrar</button>
+      </form>
+    </div>
+
+    <script src="C:\xampp\htdocs\www\Curso\Bootstrap4\js\jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="C:\xampp\htdocs\www\Curso\Bootstrap4\js\popper.min.js" crossorigin="anonymous"></script>
+    <script src="C:\xampp\htdocs\www\Curso\Bootstrap4\js\bootstrap.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
